@@ -10,7 +10,6 @@
 _G.__DEV__ = "true"
 
 local function Start()
-	require("@Controllers/UIController")
 	require("@Controllers/Libs/Cmdr")
 end
 

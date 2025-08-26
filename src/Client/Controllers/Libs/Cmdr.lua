@@ -1,4 +1,4 @@
-local Cmdr = require("@Packages/cmdr")
+local Cmdr = require(game.ReplicatedStorage:WaitForChild("CmdrClient"))
 
 
 local function Start()
