@@ -5,21 +5,17 @@
         "$className": "DataModel",
         "ReplicatedStorage": {
             "Packages": {
-                "$ignoreUnknownInstances": true,
                 "$path": "Packages"
             },
             "Client": {
-                "$ignoreUnknownInstances": true,
                 "$path": "src/Client"
             },
             "Common": {
-                "$ignoreUnknownInstances": true,
                 "$path": "src/Common"
             }
         },
         "ServerScriptService": {
             "Server": {
-                "$ignoreUnknownInstances": true,
                 "$path": "src/Server"
             }
         }

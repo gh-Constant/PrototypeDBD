@@ -15,7 +15,8 @@
                     "@Controllers": "src/Client/Controllers/",
                     "@Common": "src/Common/",
                     "@Server": "src/Server/",
-                    "@Services": "src/Server/Services/"
+                    "@Services": "src/Server/Services/",
+                    "@Commands": "src/Server/Commands/"
                 }
             },
             "target": {

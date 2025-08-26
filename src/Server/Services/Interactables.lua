@@ -14,7 +14,7 @@ local handlers = {
 		obj:SetAttribute("Downed", true)
 
 		-- Make DownedCollision collidable
-		local downedCollision = obj:FindFirstChild("DownedCollision")
+		local downedCollision = obj.Parent:FindFirstChild("DownedCollision")
 		if downedCollision and downedCollision:IsA("BasePart") then
 			downedCollision.CanCollide = true
 		end
@@ -61,15 +61,19 @@ local handlers = {
 	end,
 }
 
-local function setupInteractable(obj, tagName)
-	if not obj:IsA("BasePart") then return end
+local function setupInteractable(obj, tagName)          
+    
+    if not (tagName == "Vault" or tagName == "Pallet" or tagName == "Generator") then
+        return
+    end
+    
 	if obj:FindFirstChild("InteractPrompt") then return end
 
 	local prompt = Instance.new("ProximityPrompt")
 	prompt.Name = "InteractPrompt"
 	prompt.ActionText = "Use " .. tagName
 	prompt.ObjectText = tagName
-	prompt.MaxActivationDistance = 10
+	prompt.MaxActivationDistance = 7
 	prompt.Parent = obj
 	prompt.KeyboardKeyCode = Enum.KeyCode.Space
 

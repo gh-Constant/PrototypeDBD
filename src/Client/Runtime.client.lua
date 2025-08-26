@@ -9,8 +9,4 @@
 --  we set it here before any client code is run.
 _G.__DEV__ = "true"
 
-local function Start()
-	require("@Controllers/Libs/Cmdr")
-end
-
-Start()
+require("@Controllers/Libs/Cmdr")
